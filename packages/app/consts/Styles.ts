@@ -1,4 +1,6 @@
 import { StyleSheet } from "react-native"
+import C from "./Colors"
+import L from "./Layout"
 
 const S = StyleSheet.create({
   container: {
@@ -6,12 +8,19 @@ const S = StyleSheet.create({
     alignItems: 'center',
   },
   button: {
-    backgroundColor: 'orange'
+    backgroundColor: C.orangeish,
+    borderRadius: L.corner,
+    padding: 5,
+    margin: 5
+  },
+  textItem: {
+    fontSize: 18,
+    padding: 3
   },
   funText: {
-    color: 'red',
+    color: C.darkGray3,
     fontSize: 24,
-    backgroundColor: 'green',
+    borderRadius: L.corner
     // width: '50%',
     // opacity: 0.5
   }

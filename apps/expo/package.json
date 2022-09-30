@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.4.0",
+    "@react-navigation/drawer": "^6.5.0",
     "app": "*",
     "expo": "^46.0.0",
     "expo-splash-screen": "~0.16.1",

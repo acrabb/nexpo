@@ -4,7 +4,6 @@ import S from "../consts/Styles"
 // import { View as DView } from "dripsy"
 
 export default function DetailScreen(props: { name: string }) {
-  console.log(props)
   return (
     <View style={S.container}>
       <Text style={S.funText}>

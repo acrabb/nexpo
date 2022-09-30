@@ -1,4 +1,4 @@
-# Blank Nexpo Monorepo 🕴
+# Blank neXpo Monorepo 🕴
 
 
 ## 🔦 About

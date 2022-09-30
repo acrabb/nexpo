@@ -7,10 +7,6 @@ export default function (props: any) {
 
   return (
     <NewHomeScreen
-      onPress={() => {
-        console.log('this is web')
-        router.push('/user/ty')
-      }}
     />
   )
 }
