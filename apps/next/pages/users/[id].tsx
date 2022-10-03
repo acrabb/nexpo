@@ -2,7 +2,12 @@ import React from "react"
 import DetailScreen from 'app/screens/DetailScreen'
 import { useRouter } from 'next/router'
 
-export default function (props: any) {
+/**
+ * NOTE: the id "prop" is coming from the URL, not the props param
+ * @param props none
+ * @returns 
+ */
+export default function () {
   const router = useRouter()
 
   return (

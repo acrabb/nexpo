@@ -1,3 +1,3 @@
-import AccountScreen from 'app/screens/AccountScreen'
+import AppInfoScreen from 'app/screens/AppInfoScreen'
 
-export default AccountScreen
+export default AppInfoScreen

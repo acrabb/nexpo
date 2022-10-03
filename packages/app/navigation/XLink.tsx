@@ -1,19 +1,16 @@
 import React from 'react'
-import { useRouter } from "next/router"
-import { Pressable, ViewProps } from 'react-native'
+import { ViewProps } from 'react-native'
+import Link from 'next/link'
 
-export default function XLink(props: { ref?: string, to: string, params?: any } & ViewProps) {
-  const router = useRouter()
-  const url = props.ref // TODO add in params
-
-  /**
-   * TODO - Maybe change from Pressable to something more web-friendly that includes
-   *        expected behavior on web such as right-click and pointer.
-   *        - Expo Link object? <a> tag?
-   */
+/**
+ * Next.js version of XLink using its native `Link` component.
+ * Using <a> internally for browser-UX such as hover states and right-click menu.
+ * @param props 
+ * @returns 
+ */
+export default function XLink(props: { to: string } & ViewProps) {
   return (
-    <Pressable style={props.style} onPress={() => router.push(props.to)}>
-      {props.children}
-    </Pressable>
+    // Note: style error is complaining because React Native ViewStyle does not map to React's CSSProperties
+    <Link href={props.to}><a style={props.style}>{props.children}</a></Link>
   )
 }
