@@ -7,7 +7,7 @@ import L from "./Layout"
 /**
  * Not all ViewStyle proprties in React Native map to CSSProperties in the web.
  * For example, 'paddingHorizontal'.
- * 
+ *
  * This creates a StyleSheet object that will not auto-complete unsupported keys.
  * TODO - Change to throw error if anything not allowed is included. (negated types?)
  */
@@ -17,8 +17,8 @@ type NexpoStyles<T> = { [P in keyof T]: Omit<ViewStyle, WebExcluded> | Omit<Text
 
 /**
  * neXpo wrapper for React Native's StyleSheet.create()
- * @param styles 
- * @returns 
+ * @param styles
+ * @returns
  */
 export function create<T extends NexpoStyles<T>>(styles: T | NexpoStyles<T>): NexpoStyles<T> {
   return StyleSheet.create(styles)
@@ -49,7 +49,12 @@ const S = create({
     borderRadius: L.corner
     // width: '50%',
     // opacity: 0.5
-  }
+  },
+  tinyLogo: {
+    width: 100,
+    height: 100,
+    borderRadius: 10,
+  },
 })
 
 export default S
