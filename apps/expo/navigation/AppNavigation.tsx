@@ -1,17 +1,17 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 
-import UserWrapper from '../screens/UserScreenWrapper'
 import AppInfoScreen from 'app/screens/AppInfoScreen'
 import ItemsScreenWrapper from '../screens/ItemsScreenWrapper'
 import HomeDrawerTabs from './HomeDrawerTabs'
+import UserScreenWrapper from '../screens/UserScreenWrapper'
 
 
 const Drawer = createDrawerNavigator()
 
 const config = {
   screens: {
-    [UserWrapper.NavName]: '/users/:id',
+    [UserScreenWrapper.NavName]: '/users/:id',
     // [AppInfoScreen.NavName]: '/appinfo', <- Not needed since drawer knows how to nav here
     "ItemsTab": {
       screens: {

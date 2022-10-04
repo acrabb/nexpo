@@ -46,9 +46,6 @@ const S = create({
   funText: {
     color: C.darkGray3,
     fontSize: 24,
-    borderRadius: L.corner
-    // width: '50%',
-    // opacity: 0.5
   },
   tinyLogo: {
     width: 100,

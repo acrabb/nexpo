@@ -1,16 +1,14 @@
 import React from "react"
 import { Text, View, Image } from "react-native"
 import S from "../consts/Styles"
-// import { View as DView } from "dripsy"
 
-export default function DetailScreen(props: { name: string }) {
+export default function DetailScreen(props: { name?: string }) {
   return (
 
     <View style={S.container}>
       <Text style={S.funText}>
         This is a detail screen: {props.name ?? 'none'}
       </Text>
-      {/* <a>Testing A Tag</a> */}
       <Image
         style={S.tinyLogo}
         alt={{}}
@@ -32,7 +30,6 @@ export default function DetailScreen(props: { name: string }) {
           uri: 'https://ca.slack-edge.com/T02KFP4LX5E-U02LH0DJ3L0-g49ebc3efd53-512',
         }}
       />
-
     </View>
   )
 }

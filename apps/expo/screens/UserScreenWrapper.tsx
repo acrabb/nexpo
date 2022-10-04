@@ -1,17 +1,12 @@
+import useXParam from "app/navigation/UseXParam"
 import DetailScreen from "app/screens/DetailScreen"
 import React from "react"
 
-interface UserWrapperProps {
-  route?: {
-    params?: {
-      id: string
-    }
-  }
-}
+UserScreenWrapper.NavName = 'User' as const
+export default function UserScreenWrapper() {
+  const name = useXParam('id')
 
-UserWrapper.NavName = 'User' as const
-export default function UserWrapper(props: UserWrapperProps) {
   return (
-    <DetailScreen {...props} name={props.route?.params?.id ?? "unknown"} />
+    <DetailScreen name={name} />
   )
 }

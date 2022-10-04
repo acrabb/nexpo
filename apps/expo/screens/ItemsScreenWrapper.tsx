@@ -1,17 +1,12 @@
+import useXParam from "app/navigation/UseXParam"
 import ItemListScreen from "app/screens/ItemListScreen"
 import React from "react"
 
-interface ItemListWrapperProps {
-  route?: {
-    params?: {
-      itemId?: string
-    }
-  }
-}
 
 ItemsScreenWrapper.NavName = 'Items' as const
-export default function ItemsScreenWrapper(props: ItemListWrapperProps) {
+export default function ItemsScreenWrapper() {
+  const items = useXParam<string[]>('itemId')
   return (
-    <ItemListScreen itemId={props.route?.params?.itemId} />
+    <ItemListScreen itemId={items} />
   )
 }

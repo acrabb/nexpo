@@ -13,7 +13,7 @@ export default function NewHomeScreen() {
       <XLink style={S.button} to={'/users/param1'}>
         <Text>Go To User</Text>
       </XLink>
-      <XLink style={S.button} to={'/items?itemId=2'}>
+      <XLink style={S.button} to={'/items?itemId=2&itemId=1'}>
         <Text>Go To Item 3 via Link</Text>
       </XLink>
       <Button title="Go To Items via callback" onPress={() => nav.to('/items')} />

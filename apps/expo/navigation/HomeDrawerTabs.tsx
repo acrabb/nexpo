@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import HomeScreenWrapper from '../screens/HomeScreenWrapper'
 import ItemsScreenWrapper from '../screens/ItemsScreenWrapper'
-import UserWrapper from '../screens/UserScreenWrapper'
+import UserScreenWrapper from '../screens/UserScreenWrapper'
 
 const Tabs = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
@@ -21,7 +21,7 @@ export default function HomeDrawerTabs() {
   return (
     <Tabs.Navigator screenOptions={{ headerShown: false }}>
       <Tabs.Screen name={HomeScreenWrapper.NavName} component={HomeScreenWrapper} />
-      <Tabs.Screen name={UserWrapper.NavName} component={UserWrapper} />
+      <Tabs.Screen name={UserScreenWrapper.NavName} component={UserScreenWrapper} />
       <Tabs.Screen name={'ItemsTab'} component={ItemsTabStack} />
     </Tabs.Navigator>
   )

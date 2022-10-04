@@ -1,6 +1,7 @@
 import React from "react"
 import ItemListScreen from 'app/screens/ItemListScreen'
 import { useRouter } from 'next/router'
+import useXParam from "app/navigation/UseXParam"
 
 /**
  * NOTE: the itemId "prop" is coming from the URL, not the props param
@@ -8,9 +9,9 @@ import { useRouter } from 'next/router'
  * @returns 
  */
 export default function () {
-  const router = useRouter()
+  const items = useXParam<string[]>('itemId')
 
   return (
-    <ItemListScreen itemId={router.query.itemId as string} />
+    <ItemListScreen itemId={items} />
   )
 }

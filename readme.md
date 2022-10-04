@@ -7,16 +7,16 @@ This monorepo is a blank(ish) starter for an Expo + Next.js app.
 
 While it's pretty barebones, it does a lot of the annoying config for you. The folder structure is somewhat opinionated.
 
+## Pre-reqs
+Node 16
+`yarn`
+
 ## 🤔 TODO To Figure Out
 - How do images work in shared components? Do we just pass them in as props?
-- How do we nav from shared components? Do we pass in `onPress`? Do we define custom `useNavTo` hook for each platform?
 - ...? More questions?
 
 ## 📦 Included packages
 
-<!-- - `solito` for cross-platform navigation
-- `moti` for animations
-- `dripsy` for theming/design (you can bring your own, too) -->
 - Expo SDK 44
 - Next.js 12
 - React Navigation 6
@@ -32,7 +32,6 @@ While it's pretty barebones, it does a lot of the annoying config for you. The f
   - `app` you'll be importing most files from `app/`
     - `features` (don't use a `screens` folder. organize by feature.)
     - `provider` (all the providers that wrap the app, and some no-ops for Web.)
-    <!-- - `navigation` Next.js has a `pages/` folder. React Native doesn't. This folder contains navigation-related code for RN. You may use it for any navigation code, such as custom links. -->
 
 You can add other folders inside of `packages/` if you know what you're doing and have a good reason to.
 
